@@ -1,0 +1,17 @@
+
+@import './mixins.scss';
+
+$color : green;
+
+.a{
+    color : $color;
+
+    @include border;
+
+    .b{
+        color : darken($color ,20);
+
+
+    }
+}
+
