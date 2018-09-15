@@ -32,3 +32,30 @@
 //         scrtimer = setInterval(function(){scroll($this);}, 2000)
 //     }).trigger("mouseout")
 // }
+
+$('.all-shops').mouseenter(function(){
+    $(".top-submenu").show();
+})
+
+$('.top-submenu').mouseleave(function(){
+    $(".top-submenu").hide();
+})
+
+$('.class-list li').mouseenter(function(){
+    $(this).addClass('a-block').siblings().removeClass('a-block');
+})
+
+
+var timer = null;
+var index = 0;
+var $banners = $(".slidebann a");
+var $banner_b = $(".oul li");
+timer = setInterval(autoplay,2000);
+function autoplay(){
+    index++;
+    if(index == $banners_b.size()){
+        index = 0;
+    }
+    $banner_b.eq(index).addClass('current').siblings().removeClass('current');
+    $banners.eq(index).animate({'zIndex':9999}).siblings().animate({'zIndex':0});
+}
