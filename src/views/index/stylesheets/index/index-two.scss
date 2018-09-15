@@ -1,3 +1,151 @@
-h1 {
-    font-size: 5em;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+img{
+    display: block;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.top-bar{
+    height: 194px;
+    position: relative;
+
+    .top-notice{
+        height: 30px;
+        
+        background:#0e0e0f;
+        #small2{
+            position: absolute;
+            top: 3px;
+            left: 15px;
+        }      
+    }
+}
+
+.top-fk{
+    height: 30px;
+    background: #141415;
+    ul{
+        margin-top: 0;
+        width: 1240px;
+        height: 30px;
+        left: 50px;
+        overflow: hidden;
+        //margin: 0 auto;
+       position: absolute;
+
+        
+             li{
+                 height: 30p;
+                line-height: 30px;
+                font-size: 14px;
+                color: #a7a7a7;
+                white-space: nowrap;
+
+                a{
+                    color: #a7a7a7;
+                }
+            }
+    }
+}
+.top-info{
+    //position: absolute;
+    height: 100px;
+    background: #141415;
+    .log-1{
+       // background: red;
+        width: 1280px;
+        height: 99px;
+        margin: 0 auto;
+        .small-log{
+            width: 148px;
+            height: 79px;
+            margin-left: 20px;
+            overflow: hidden;
+            //background: blue;
+            float: left;
+           background: url("../images/ico-comm.png") no-repeat -180px 1px;
+        }
+        .small-log2{
+            width: 172px;
+            height: 34px;
+            background: pink;
+            margin-left: 20px;
+            margin-top: 25px;
+            float: left;
+            overflow: hidden;
+            background: url("../images/ico-comm.png") no-repeat -4px -29px;
+        }
+        .shop-car{
+            margin-top: 47px;
+            width: 110px;
+            line-height: 24px;
+            font-size: 16px;
+            float: right;
+            position: relative;
+            .shop-log{
+                margin-right: 7px;
+                display: block;
+                width: 24px;
+                height: 24px;
+                background: url("../images/ico-comm.png") no-repeat 0px -62px;
+                position: absolute;
+
+            }
+            .shop{
+                line-height: 24px;
+                font-size: 16px;
+                color: #f6f7ef;
+                //float: right;
+                position: absolute;
+                right: 32px;
+            }
+            .shop-con{
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #ffc933;
+                color: #333;
+                font-size: 14px;
+                text-align: center;
+                float: right;
+            }
+           
+        }
+        .login{
+            width: 107px;
+            height: 60px;
+            line-height: 40px;          
+            margin-top: 39px;
+            margin-right: 20px;
+            float: right;
+            text-align: right;
+            a{
+                font-size: 16px;
+                color: #a7a7a7;
+            }
+        }
+        .search{
+        
+            width: 240px;
+            height: 40px;
+            background: #242424;
+            border-radius: 20px;
+            position: relative;
+            float: left;
+            font-size: 16px;
+            color: #f6f7ef;
+            float: right;
+            margin-top: 40px;
+        }
+    }
+    
 }
