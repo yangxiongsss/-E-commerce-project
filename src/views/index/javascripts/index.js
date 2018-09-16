@@ -52,10 +52,18 @@ $('.lunol li').mouseenter(function(){
     timer = setInterval(autoPlay,1500);
 });
 
-$('.link img').mouseenter(function(){
-    $(this).stop().animate({'top':100});
+$('.list-ul li').mouseenter(function(){
+    $(this).stop().animate({'top':-3},200);
     $(this).addClass('active');
 }).mouseleave(function(){
-    $(this).stop().animate({'top':105});
+    $(this).stop().animate({'top':0},200);
     $(this).removeClass('active');
 })
+$('.clearfix li').mouseenter(function(){
+    $(this).stop().animate({'top':-3},200);
+    $(this).addClass('active');
+}).mouseleave(function(){
+    $(this).stop().animate({'top':0},200);
+    $(this).removeClass('active');
+})
+

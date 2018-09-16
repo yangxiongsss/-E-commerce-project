@@ -365,7 +365,7 @@ a{
 .min-index{
    overflow: hidden;
     padding-bottom: 50px;
-    background: red;
+    background:#fff;
     border-radius: 8px;
     position: relative;
     width: 1280px;
@@ -407,24 +407,170 @@ a{
     .min-list{
         margin: 20px auto 5px;
         width: 1200px;
-        li{
-            margin: 0 10px;
-            float: left;
-            width: 280px;
-            height: 375px;
-            
-            .link{
-                display: block;
-                -webkit-transition: all .2s linear;
-                transition: all .2s linear;
-                img{
-                    border:0;
-                    position: absolute;
-                    .avtive{
-                        box-shadow: 20px 20pxpx 30px black;
+        overflow: hidden;
+        padding-bottom: 0;
+        ul{
+            height: auto;
+            li{
+                margin: 0 10px;
+                float: left;
+                width: 280px;
+                height: 375px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 0;
+                z-index: 1;
+               
+                .link{
+                    display: block;
+                    -webkit-transition: all .2s linear;
+                    transition: all .2s linear;
+                    img{
+                        border:0;
+                        
+                        .avtive{
+                            box-shadow: 20px 20pxpx 3px black;
+                        }
                     }
                 }
             }
         }
+        
     }
+    .index-glist{
+        padding-top: 20px;
+        padding-bottom: 0;
+        background: #fff;
+        overflow: hidden;
+        .clearfix{
+            margin-left: 40px;
+            width: 1200px;
+            height: auto;
+            li{
+                margin: 0 10px 20px;
+                margin-right: 7px;
+                margin-bottom: 0;
+                float: left;
+                width: 280px;
+                height: 356px;
+                border: 1px solid #eee;
+                position: relative;
+                z-index: 1;
+                -webkit-transition: all .2s linear;
+                transition: all .2s linear;
+                overflow: hidden;
+                .avtive{
+                    box-shadow: 20px 20pxpx 3px black;
+                }
+                .good-info{
+                    text-align: center;
+                    overflow: hidden
+                }
+                .good-link{
+                    img{
+                        border: 0;
+                        overflow: hidden;
+                    }
+                    
+                    .good-name{
+                        font-size: 14px;
+                        color: #444;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        line-height: 24px;
+                        text-align: center;
+                        margin-top: 18px;
+                    }
+                    .good-pri{
+                        line-height: 25px;
+                        font-size: 16px;
+                        color: #f7545f;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+// 底部部分
+.footer{
+    background: #1b1b1b;
+    color: #777;
+    font-size: 12px;
+    line-height: 24px;
+    margin-top: 40px;
+    overflow: hidden;
+    .footfix{
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        border-bottom: 1px solid #606060;
+        // color: #777;
+        // font-size: 12px;
+        // line-height: 24px;
+        .footer-dic{
+            width: 213px;
+            height: 64px;
+            position: absolute;
+            top: 51px;
+            left: 80px;
+            color: #a8a8a8;
+        }
+        .footer-info{
+            height: 135px;
+            width: 395px;
+            font-size: 14px;
+            line-height: 30px;
+            margin: 50px 0 0 317px;
+            border-left: 1px solid #606060;
+            border-right: 1px solid #606060;
+            float: left;
+            overflow: hidden;
+            color: #777;
+            li{
+                width: 118px;
+                height: 55px;
+                padding: 0 38px;
+                float: left;
+                a{
+                    color: #a8a8a8;
+                }
+            }
+        }
+
+        .footer-code{
+            line-height: 62px;
+            padding: 50px 0 20px 33px;
+            float: left;
+            li{
+                float: left;
+                font-size: 16px;
+                color: #fff;
+                padding: 0 38px;
+                text-align: center; 
+            }
+        }
+    }
+}
+
+
+.footer-fk{
+ 
+        background: #1b1b1b;
+        font-size: 12px;
+        line-height: 24px;
+        padding: 30px 0 40px;
+        text-align: center;
+        color: #777;
+        a{
+            color: #777;
+        }
 }
