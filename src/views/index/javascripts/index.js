@@ -17,21 +17,6 @@
      }).trigger('mouseout')
  }
 
-// function autoScroll(){
-//    var scrtimer; //定时器
-//     var $this = $(".top-notice ul");
-//     function scroll(obj){
-//         var scroll = obj.find("ul:first");
-//         var lineHeight = scroll.find("li:first").height();
-//         scroll.animate({"margin-top": -lineHeight +"px" }, 600, function(){scroll.css({"margin-top": "0"}).find("li:first").appendTo(scroll);});
-//     }
-
-//     $this.hover(function(){
-//         clearInterval(scrtimer);//清理定时器
-//     },function(){
-//         scrtimer = setInterval(function(){scroll($this);}, 2000)
-//     }).trigger("mouseout")
-// }
 
 $('.all-shops').mouseenter(function(){
     $(".top-submenu").show();
@@ -42,20 +27,35 @@ $('.top-submenu').mouseleave(function(){
 })
 
 $('.class-list li').mouseenter(function(){
-    $(this).addClass('a-block').siblings().removeClass('a-block');
+    $(this).addClass('ablock').siblings().removeClass('ablock');
 })
 
-
-var timer = null;
+// banner图
 var index = 0;
-var $banners = $(".slidebann a");
-var $banner_b = $(".oul li");
-timer = setInterval(autoplay,2000);
-function autoplay(){
+var timer = null;
+timer = setInterval(autoPlay,2000);
+function autoPlay(){
     index++;
-    if(index == $banners_b.size()){
+    if( index == 5 ){
         index = 0;
     }
-    $banner_b.eq(index).addClass('current').siblings().removeClass('current');
-    $banners.eq(index).animate({'zIndex':9999}).siblings().animate({'zIndex':0});
+    $(".lunol li").eq(index).addClass("active").siblings().removeClass("active");
+    $(".lunul li").eq(index).animate({"left":0},1000,function(){
+    $(this).css("z-index",0).siblings().css({"z-index":1,"left":1366})
+    })
 }
+$('.lunol li').mouseenter(function(){
+    clearInterval(timer);
+    index = $(this).index()-1;
+    autoPlay();
+}).mouseleave(function(){
+    timer = setInterval(autoPlay,1500);
+});
+
+$('.link img').mouseenter(function(){
+    $(this).stop().animate({'top':100});
+    $(this).addClass('active');
+}).mouseleave(function(){
+    $(this).stop().animate({'top':105});
+    $(this).removeClass('active');
+})
