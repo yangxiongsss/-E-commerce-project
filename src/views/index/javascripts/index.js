@@ -1,9 +1,11 @@
 
 $(window).scroll(function(){
     var sTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if( sTop > 100 ){
-       alert("什么原因啊")
-        $('top-info').css({'position':fixed,'top':0});
+    if( sTop > 500 ){
+        
+        $('.top-bar').css({'position':'fixed','top':0,'left':0,'right':0,'z-index':9999});
+    }else{
+        $('.top-bar').css({'position':'static'});
     }
 })
 
