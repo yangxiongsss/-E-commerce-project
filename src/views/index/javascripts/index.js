@@ -1,21 +1,11 @@
 
-
- function autoScroll(){
-     var scrtimer;
-     var $this = $(".top-fk ul");
-     function scroll(obj){
-         var scroll = obj.find('ul:first');
-         var lineHeight = scroll.find('li:first').height();
-         scroll.animate({'margin-top':-30 + 'px'},600,function(){
-             scroll.css({'margin-top':0}).find('li:first').appendTo(scroll);
-         });
-     }
-     $this.hover(function(){
-         clearInterval(scrtimer);
-     },function(){
-         scrtimer = setInterval(function(){scroll($this);},2000)
-     }).trigger('mouseout')
- }
+$(window).scroll(function(){
+    var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if( sTop > 100 ){
+       alert("什么原因啊")
+        $('top-info').css({'position':fixed,'top':0});
+    }
+})
 
 
 $('.all-shops').mouseenter(function(){
@@ -26,9 +16,7 @@ $('.top-submenu').mouseleave(function(){
     $(".top-submenu").hide();
 })
 
-$('.class-list li').mouseenter(function(){
-    $(this).addClass('ablock').siblings().removeClass('ablock');
-})
+
 
 // banner图
 var index = 0;
