@@ -49,7 +49,7 @@
            
             <!-- 登录 -->
             <div class="login">
-                <a href="../load/load.html" title="立即登录">立即登录</a>
+                <a href="#" id="zcdl" title="立即登录">立即登录</a>
             </div>
         
              <!-- 所搜 -->
@@ -491,8 +491,10 @@
 <div class="mask">
         <div class="load">
             
-            <form action=""  >
+            <form action="../load/load.html"  id="form" >
+               
                     <table width="449" height="530" border="1" align='center'>
+                            <span class="close"><a class="closes" href="#">X</a></span>
                       <tr>
                         <td colspan="2" align="center">用户名注册</td>
                         </tr>
@@ -500,7 +502,7 @@
                         <td width="116" align="right">用户名：</td>
                         <td width="323"><label>
                           <input type="text" name="" id="name" />
-                          <span id="s1"></span>
+                          <span id="s1" class="spans"></span>
                         </label></td>
                       </tr>
                      
@@ -509,14 +511,14 @@
                         <td align="right">密码：</td>
                         <td><label>
                           <input type="password" name="" id="pwd" />
-                          <span id="s2"></span>
+                          <span id="s2" class="spans"></span>
                         </label></td>
                       </tr>
                       <tr>
                         <td align="right">确认密码：</td>
                         <td><label>
                           <input type="password" name="" id="qpwd" />
-                          <span id="s3"></span>
+                          <span id="s3" class="spans"></span>
                         </label></td>
                       </tr>
                       <tr>
@@ -524,7 +526,7 @@
                         <td><label>
                           <input type="text" name="" id="tel" />
                           <span><a href="#" id="btn2">点击发送验证码</a></span>
-                          <span id="s4"></span>
+                          <span id="s4" class="spans"></span>
                         </label></td>
                       </tr>
           
@@ -533,7 +535,7 @@
                         <td><label>
                           <input id="inp1" type="text" placeholder="123456" />
                           <span id="yz" style=" background:url('./images/1.png') -10px -15px;width:135px;font-style: italic; height: 40px;line-height:40px;border: 1px solid black;display: inline-block;"></span>
-                          <span id="s4"></span>
+
                         </label></td>
                       </tr>
                        
@@ -552,10 +554,12 @@
 
 
 
-        <div class="denglu">
+        <!-- <div class="denglu">
                 
-                <form action=""  >
+                <form action="" id="form1"  >
                         <table width="449" height="530" border="1" align='center'>
+                                <span class="close"><a id="fkclose" href="#">X</a></span>
+
                           <tr>
                             <td colspan="2" align="center">用户登录</td>
                             </tr>
@@ -563,14 +567,14 @@
                             <td width="116" align="right">用户名：</td>
                             <td width="323"><label>
                               <input type="text" name="" id="name1" />
-                              <span id="s11"></span>
+                          
                             </label></td>
                           </tr>                       
                         <tr>
                             <td align="right">密码：</td>
                             <td><label>
                               <input type="password" name="" id="pwd1" />
-                              <span id="s22"></span>
+                           
                             </label></td>
                           </tr>
                           
@@ -581,16 +585,18 @@
                                     <input type="text" id="yzm222"  />
                                          <span id="yz2" style=" background:url('./images/1.png') -10px -15px;width:80px;font-style: italic; height: 40px;border: 1px solid black;display: inline-block;"></span>
                                     <a href="javascript:;" id='btn22'>看不清</a>
+                                    <span id="s5" class="spans"></span>
                                     </label></td>
                                 </tr>
                                 <tr>
                                     <td height="36" colspan="2" align="center"><label>
-                                    <input id="inp22" type="submit" value="点&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;击&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录"  />
+                                    <input id="inp22" type="button" value="点&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;击&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录"  /><span id="s6" class="spans"></span>
+                                    
                                     </label></td>
                                 </tr>
                         </table>
                     </form>
-            </div>
+            </div> -->
 
     </div>
 
@@ -610,7 +616,6 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
      <!-- inject:js -->
      <script src="/index/js/index.min.js"></script>
-     <script src="/index/js/public.min.js"></script>
      <script src="/index/js/vendor.min.js"></script>
      <!-- endinject -->
 </body>

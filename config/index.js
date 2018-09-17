@@ -37,8 +37,7 @@ const config = {
     jsoptions : {//js配置
         'index' : {         
                 index :   './src/views/index/javascripts/index.js',
-                vendor:   './src/views/index/javascripts/vendor.js',                   
-                public:   './src/views/index/javascripts/public.js'                   
+                vendor:   './src/views/index/javascripts/vendor.js'                                 
         },
         'list' : {
             'list' : './src/views/list/javascripts/list.js'

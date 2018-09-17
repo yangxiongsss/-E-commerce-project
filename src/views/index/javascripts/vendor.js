@@ -1,6 +1,13 @@
 
-
-
+$('#zcdl').click(function(){
+    $('.mask').show();
+    $('.load').show();
+})
+$('.closes').click(function(){
+    $('.mask').hide();
+    $('.load').hide();
+    $('denglu').hide();
+})
 
 
 var timer = null;
@@ -25,9 +32,10 @@ $('#oul li').mouseenter(function(){
 
 
 
-$('form').submit(function(){
+$('#form').submit(function(){
     if( flagname && flagPwd && flagQpwd &&  flagTel  ){
-        $('.load').hide();
+        document.cookie = "username="+$('#name').val();
+        document.cookie = "userpwd="+ $('#pwd').val();
         return true;
     }else{
         return false;
@@ -43,7 +51,7 @@ $('#name').blur(function(){
         $('#s1').html('正确');
     }else{
         flagname = false;
-        $('#s1').html('请输入1-12位字符验证码');
+        $('#s1').html('请输入1-12位字符');
     }
 })
 var flagPwd = null;
@@ -87,12 +95,15 @@ var flagTel = null;
     })
 
 
+        
 
+    
 
 
 
     var flag = true;
     $('#btn2').click(function(){
+        flag=true;
         if(flag){
             codeButton();
             flag = false;
@@ -118,6 +129,9 @@ var flagTel = null;
 	    }, 60000);
     }
 
+    function rand( min,max ){
+        return Math.round( Math.random()*(max-min) + min )
+    }
 
     function yzm(){
 		var str = "";//用来拼接验证码
@@ -132,5 +146,7 @@ var flagTel = null;
 		return str;
     }
     $('#yz2').html( yzm() );
-
+    $('#btn22').click(function(){
+        $('#yz2').html( yzm() );
+    })
     
