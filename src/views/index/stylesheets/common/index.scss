@@ -13,8 +13,8 @@
     //display: none;
     .load{
         width: 600px;
-        height: 500px;
-        background: #fff;
+        height: 550px;
+        background:gray;
         position: fixed;
         top: 0;
         left: 0;
@@ -22,20 +22,64 @@
         bottom: 0;
         margin: auto;
         z-index: 99999 ;
-        #form-in{
+       display: none;
+        form{
             position: relative;
-            top: 30px;
-            left: 100px;
-            font-size: 22px;
-            color: black;
-            line-height: 60px;
+            left: 80px;
             input{
-                width: 200px;
-                height: 22px;
-                outline: none;
+                height: 40px;
+                width: 320px;
+            }
+            #inp1{
+                width: 170px;
+            }
+            #yz{
+                position: absolute;
+                right: 160px;
+                color: red;
             }
             
-
+            #inp2{
+                font-size: 18px;
+                color: red;
+            }
+            #tel{
+                width: 200px;
+            }
         }
+    }
+    .denglu{
+        width: 600px;
+        height: 550px;
+        background:gray;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 999999 ;
+        form{
+            position: relative;
+            left: 80px;
+            input{
+                height: 40px;
+                width: 320px;
+            }
+            #yzm222{
+                width: 170px;
+            }
+            #yz2{
+                position: absolute;
+                right: 217px;
+            }
+            #btn22{
+                font-size: 18px;
+                position: absolute;
+                right: 160px;
+                top: 405px;
+            }
+        }
+
     }
 }
